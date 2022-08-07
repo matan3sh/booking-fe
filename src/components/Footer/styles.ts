@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../styles";
 
 export const FooterContainer = styled.div`
   width: 100%;
@@ -20,7 +21,7 @@ export const FooterList = styled.ul`
 
 export const FooterListItem = styled.li`
   margin-bottom: 10px;
-  color: #003580;
+  color: ${theme.colors.primary};
   cursor: pointer;
 `;
 
