@@ -5,6 +5,7 @@ import {
   PropertyList,
   FeaturedProperties,
   MailList,
+  Footer,
 } from "../../components";
 
 import { HomeWrapper, HomeContainer, HomeTitle } from "./styles";
@@ -25,6 +26,7 @@ export function Home() {
         <FeaturedProperties />
 
         <MailList />
+        <Footer />
       </HomeContainer>
     </HomeWrapper>
   );

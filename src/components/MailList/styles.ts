@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../styles";
 
 export const MailListContainer = styled.div`
-  width: 100%;
+  width: 100vw;
   margin-top: 50px;
   background-color: ${theme.colors.primary};
   color: white;

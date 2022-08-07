@@ -8,6 +8,7 @@ export const HomeContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  overflow: hidden;
 `;
 
 export const HomeTitle = styled.h1`
