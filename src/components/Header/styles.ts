@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { DateRange } from "react-date-range";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { theme } from "../../styles";
 
 export const HeaderWrapper = styled.div`
@@ -6,6 +8,7 @@ export const HeaderWrapper = styled.div`
   color: ${theme.colors.text};
   display: flex;
   justify-content: center;
+  position: relative;
 `;
 
 export const HeaderContainer = styled.div`
@@ -45,4 +48,44 @@ export const HeaderButton = styled.button`
   border: none;
   padding: 10px;
   cursor: pointer;
+`;
+
+export const HeaderSearch = styled.div`
+  height: 30px;
+  background-color: ${theme.colors.text};
+  border: 3px solid ${theme.colors.secendery};
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  max-width: 1024px;
+`;
+
+export const HeaderSearchItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const HeaderSearchIcon = styled(FontAwesomeIcon)`
+  color: lightgrey;
+`;
+
+export const HeaderSearchInput = styled.input`
+  border: none;
+  outline: none;
+`;
+
+export const HeaderSearchText = styled.span`
+  color: lightgrey;
+  cursor: pointer;
+`;
+
+export const HeaderSearchDate = styled(DateRange)`
+  position: absolute;
+  top: 50px;
 `;
