@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { theme } from "../../styles";
 
 export const NavbarWrapper = styled.div`
   height: 50px;
-  background-color: #003580;
+  background-color: ${theme.colors.primary};
   display: flex;
   justify-content: center;
 `;
@@ -10,7 +11,7 @@ export const NavbarWrapper = styled.div`
 export const NavbarContainer = styled.div`
   width: 100%;
   max-width: 1024px;
-  color: white;
+  color: ${theme.colors.text};
   display: flex;
   align-items: center;
   justify-content: space-between;
