@@ -4,6 +4,7 @@ import {
   Navbar,
   PropertyList,
   FeaturedProperties,
+  MailList,
 } from "../../components";
 
 import { HomeWrapper, HomeContainer, HomeTitle } from "./styles";
@@ -22,6 +23,8 @@ export function Home() {
 
         <HomeTitle>Homes guests love</HomeTitle>
         <FeaturedProperties />
+
+        <MailList />
       </HomeContainer>
     </HomeWrapper>
   );
