@@ -1,4 +1,10 @@
-import { Featured, Header, Navbar, PropertyList } from "../../components";
+import {
+  Featured,
+  Header,
+  Navbar,
+  PropertyList,
+  FeaturedProperties,
+} from "../../components";
 
 import { HomeWrapper, HomeContainer, HomeTitle } from "./styles";
 
@@ -13,6 +19,9 @@ export function Home() {
 
         <HomeTitle>Browse by property type</HomeTitle>
         <PropertyList />
+
+        <HomeTitle>Homes guests love</HomeTitle>
+        <FeaturedProperties />
       </HomeContainer>
     </HomeWrapper>
   );
