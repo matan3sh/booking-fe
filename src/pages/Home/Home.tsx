@@ -6,7 +6,7 @@ export function Home() {
   return (
     <HomeContainer>
       <Navbar />
-      <Header />
+      <Header type="home" />
     </HomeContainer>
   );
 }

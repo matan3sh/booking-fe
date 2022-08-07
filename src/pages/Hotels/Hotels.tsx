@@ -1,7 +1,10 @@
+import { Navbar, Header } from "../../components";
+
 export function Hotels() {
   return (
     <div>
-      <h1>Hotels</h1>
+      <Navbar />
+      <Header type="list" />
     </div>
   );
 }

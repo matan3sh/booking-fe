@@ -11,10 +11,11 @@ export const HeaderWrapper = styled.div`
   position: relative;
 `;
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div<{ type: "list" | "home" }>`
   width: 100%;
   max-width: 1024px;
   margin: 20px 0px 100px 0px;
+  margin-bottom: ${({ type }) => (type === "list" ? "0px" : "100px")};
 `;
 
 export const HeaderList = styled.div`
@@ -50,7 +51,7 @@ export const HeaderButton = styled.button`
   cursor: pointer;
 `;
 
-export const HeaderSearch = styled.div`
+export const HeaderSearchContainer = styled.div`
   height: 30px;
   background-color: ${theme.colors.text};
   border: 3px solid ${theme.colors.secendery};
@@ -89,3 +90,45 @@ export const HeaderSearchDate = styled(DateRange)`
   position: absolute;
   top: 50px;
 `;
+
+export const HeaderOptions = styled.div`
+  position: absolute;
+  top: 50px;
+  background-color: ${theme.colors.text};
+  color: ${theme.colors.textSecondary};
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+`;
+
+export const HeaderOptionsItem = styled.div`
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+`;
+
+export const HeaderOptionsText = styled.span``;
+
+export const OptionCounter = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+`;
+
+export const OptionCounterButton = styled.button`
+  width: 30px;
+  height: 30px;
+  border: 1px solid ${theme.colors.alternative};
+  color: ${theme.colors.alternative};
+  cursor: pointer;
+  background-color: ${theme.colors.text};
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+`;
+
+export const OptionCounterText = styled.span``;

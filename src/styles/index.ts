@@ -4,5 +4,6 @@ export const theme = {
     secendery: "#febb02",
     alternative: "#0071c2",
     text: "#ffffff",
+    textSecondary: "grey",
   },
 };
