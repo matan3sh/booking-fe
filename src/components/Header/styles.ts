@@ -89,6 +89,7 @@ export const HeaderSearchText = styled.span`
 export const HeaderSearchDate = styled(DateRange)`
   position: absolute;
   top: 50px;
+  z-index: ${theme.properties.highZindex};
 `;
 
 export const HeaderOptions = styled.div`
@@ -99,6 +100,7 @@ export const HeaderOptions = styled.div`
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  z-index: ${theme.properties.highZindex};
 `;
 
 export const HeaderOptionsItem = styled.div`

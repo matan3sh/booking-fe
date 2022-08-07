@@ -1,12 +1,19 @@
-import { Header, Navbar } from "../../components";
+import { Featured, Header, Navbar, PropertyList } from "../../components";
 
-import { HomeContainer } from "./styles";
+import { HomeWrapper, HomeContainer, HomeTitle } from "./styles";
 
 export function Home() {
   return (
-    <HomeContainer>
+    <HomeWrapper>
       <Navbar />
       <Header type="home" />
-    </HomeContainer>
+
+      <HomeContainer>
+        <Featured />
+
+        <HomeTitle>Browse by property type</HomeTitle>
+        <PropertyList />
+      </HomeContainer>
+    </HomeWrapper>
   );
 }

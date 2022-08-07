@@ -6,4 +6,9 @@ export const theme = {
     text: "#ffffff",
     textSecondary: "grey",
   },
+  properties: {
+    zIndex: 1,
+    highZindex: 2,
+    lowZindex: 0,
+  },
 };
