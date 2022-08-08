@@ -16,7 +16,7 @@ export function Hotels() {
   const { state } = useLocation() as LocationState;
 
   return (
-    <div>
+    <>
       <Navbar />
       <Header />
 
@@ -39,6 +39,6 @@ export function Hotels() {
           </HotelsResults>
         </HotelsWrapper>
       </HotelsContainer>
-    </div>
+    </>
   );
 }
