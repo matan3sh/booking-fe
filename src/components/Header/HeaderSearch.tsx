@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
   faBed,
@@ -37,6 +38,9 @@ export function HeaderSearch({
   openOptions,
   toggleOptions,
 }: IProps) {
+  const navigate = useNavigate();
+
+  const [destination, setDestination] = useState<string>("");
   const [date, setDate] = useState<Range[]>([
     {
       startDate: new Date(),
@@ -57,11 +61,19 @@ export function HeaderSearch({
     }));
   };
 
+  const handleSearch = () => {
+    navigate("/hotels", { state: { destination, date, options } });
+  };
+
   return (
     <HeaderSearchContainer>
       <HeaderSearchItem>
         <HeaderSearchIcon icon={faBed} />
-        <HeaderSearchInput type="text" placeholder="Where are you going?" />
+        <HeaderSearchInput
+          onChange={(e) => setDestination(e.target.value)}
+          type="text"
+          placeholder="Where are you going?"
+        />
       </HeaderSearchItem>
 
       <HeaderSearchItem>
@@ -80,6 +92,7 @@ export function HeaderSearch({
             onChange={(item) => setDate([item.selection])}
             moveRangeOnFirstSelection={false}
             ranges={date}
+            minDate={new Date()}
           />
         )}
       </HeaderSearchItem>
@@ -146,7 +159,7 @@ export function HeaderSearch({
       </HeaderSearchItem>
 
       <HeaderSearchItem>
-        <HeaderButton>Search</HeaderButton>
+        <HeaderButton onClick={handleSearch}>Search</HeaderButton>
       </HeaderSearchItem>
     </HeaderSearchContainer>
   );

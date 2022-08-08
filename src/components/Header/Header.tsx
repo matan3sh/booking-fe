@@ -21,10 +21,10 @@ import {
 import { HeaderSearch } from "./HeaderSearch";
 
 interface IProps {
-  type: "list" | "home";
+  home?: boolean;
 }
 
-export function Header({ type }: IProps) {
+export function Header({ home }: IProps) {
   const [openDate, setOpenDate] = useState<boolean>(false);
   const [openOptions, setOpenOptions] = useState<boolean>(false);
 
@@ -33,7 +33,7 @@ export function Header({ type }: IProps) {
 
   return (
     <HeaderWrapper>
-      <HeaderContainer type={type}>
+      <HeaderContainer home={home}>
         <HeaderList>
           <HeaderItem active>
             <FontAwesomeIcon icon={faBed} />
@@ -57,7 +57,7 @@ export function Header({ type }: IProps) {
           </HeaderItem>
         </HeaderList>
 
-        {type !== "list" && (
+        {home && (
           <>
             <HeaderTitle>A lifetime of discounts? It's Genius</HeaderTitle>
             <HeaderDescription>

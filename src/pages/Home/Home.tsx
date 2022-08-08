@@ -14,7 +14,7 @@ export function Home() {
   return (
     <HomeWrapper>
       <Navbar />
-      <Header type="home" />
+      <Header home />
 
       <HomeContainer>
         <Featured />
