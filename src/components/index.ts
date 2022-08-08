@@ -6,3 +6,4 @@ export { FeaturedProperties } from "./FeaturedProperties/FeaturedProperties";
 export { MailList } from "./MailList/MailList";
 export { Footer } from "./Footer/Footer";
 export { HotelCard } from "./HotelCard/HotelCard";
+export { HotelsSearch } from "./HotelsSearch/HotelsSearch";
