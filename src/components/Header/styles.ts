@@ -11,11 +11,11 @@ export const HeaderWrapper = styled.div`
   position: relative;
 `;
 
-export const HeaderContainer = styled.div<{ type: "list" | "home" }>`
+export const HeaderContainer = styled.div<{ home?: boolean }>`
   width: 100%;
   max-width: 1024px;
   margin: 20px 0px 100px 0px;
-  margin-bottom: ${({ type }) => (type === "list" ? "0px" : "100px")};
+  margin-bottom: ${({ home }) => (!home ? "0px" : "100px")};
 `;
 
 export const HeaderList = styled.div`
@@ -54,7 +54,7 @@ export const HeaderButton = styled.button`
 export const HeaderSearchContainer = styled.div`
   height: 30px;
   background-color: ${theme.colors.text};
-  border: 3px solid ${theme.colors.secendery};
+  border: 3px solid ${theme.colors.secondery};
   display: flex;
   align-items: center;
   justify-content: space-around;
