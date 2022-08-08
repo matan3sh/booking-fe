@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { format } from "date-fns";
 import { useState } from "react";
+import { format } from "date-fns";
 import { useLocation } from "react-router-dom";
 import { Range, DateRange } from "react-date-range";
-import { Navbar, Header } from "../../components";
+
+import { Navbar, Header, HotelCard } from "../../components";
 
 import {
   HotelsContainer,
@@ -128,7 +129,15 @@ export function Hotels() {
             <HotelsSearchButton type="button">Search</HotelsSearchButton>
           </HotelsSearch>
 
-          <HotelsResults>List Results</HotelsResults>
+          <HotelsResults>
+            <HotelCard />
+            <HotelCard />
+            <HotelCard />
+            <HotelCard />
+            <HotelCard />
+            <HotelCard />
+            <HotelCard />
+          </HotelsResults>
         </HotelsWrapper>
       </HotelsContainer>
     </div>
