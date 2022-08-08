@@ -6,47 +6,8 @@ export const HotelContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-`;
-
-export const HotelSlider = styled.div`
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.613);
-  z-index: 999;
-  display: flex;
-  align-items: center;
-
-  .close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    color: lightgray;
-    cursor: pointer;
-  }
-
-  .arrow {
-    margin: 20px;
-    font-size: 50px;
-    color: lightgray;
-    cursor: pointer;
-  }
-`;
-
-export const HotelSliderWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const HotelSliderImage = styled.img`
-  width: 80%;
-  height: 80vh;
+  overflow: hidden;
+  gap: 30px;
 `;
 
 export const HotelWrapper = styled.div`

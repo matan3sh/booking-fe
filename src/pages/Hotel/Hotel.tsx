@@ -1,19 +1,17 @@
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
-  faCircleXmark,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
-import { Footer, Header, MailList, Navbar } from "../../components";
+import {
+  Footer,
+  Header,
+  ImageSlider,
+  MailList,
+  Navbar,
+} from "../../components";
 import {
   HotelContainer,
-  HotelSlider,
-  HotelSliderImage,
-  HotelSliderWrapper,
   HotelWrapper,
   BookNowButton,
   HotelTitle,
@@ -59,16 +57,6 @@ export function Hotel() {
     setOpen(true);
   };
 
-  const handleMove = (direction: string) => {
-    let newSlideNumber;
-    if (direction === "l") {
-      newSlideNumber = slideNumber === 0 ? 5 : slideNumber - 1;
-    } else {
-      newSlideNumber = slideNumber === 5 ? 0 : slideNumber + 1;
-    }
-    setSlideNumber(newSlideNumber);
-  };
-
   return (
     <>
       <Navbar />
@@ -76,27 +64,14 @@ export function Hotel() {
 
       <HotelContainer>
         {open && (
-          <HotelSlider>
-            <FontAwesomeIcon
-              icon={faCircleXmark}
-              className="close"
-              onClick={() => setOpen(false)}
-            />
-            <FontAwesomeIcon
-              icon={faCircleArrowLeft}
-              className="arrow"
-              onClick={() => handleMove("l")}
-            />
-            <HotelSliderWrapper>
-              <HotelSliderImage src={photos[slideNumber].src} alt="" />
-            </HotelSliderWrapper>
-            <FontAwesomeIcon
-              icon={faCircleArrowRight}
-              className="arrow"
-              onClick={() => handleMove("r")}
-            />
-          </HotelSlider>
+          <ImageSlider
+            setOpen={setOpen}
+            slideNumber={slideNumber}
+            setSlideNumber={setSlideNumber}
+            photos={photos}
+          />
         )}
+
         <HotelWrapper>
           <BookNowButton>Reserve or Book Now!</BookNowButton>
           <HotelTitle>Tower Street Apartments</HotelTitle>

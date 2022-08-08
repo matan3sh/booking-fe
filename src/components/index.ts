@@ -7,3 +7,4 @@ export { MailList } from "./MailList/MailList";
 export { Footer } from "./Footer/Footer";
 export { HotelCard } from "./HotelCard/HotelCard";
 export { HotelsSearch } from "./HotelsSearch/HotelsSearch";
+export { ImageSlider } from "./ImageSlider/ImageSlider";
